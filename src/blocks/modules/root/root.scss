@@ -5,8 +5,8 @@
   background: transparent;
 }
 .root::-webkit-scrollbar-thumb {
-  background: blue;
-  border: 3px solid blue;
+  background: $accent-color;
+  border: 3px solid $accent-color;
   border-radius: 5px;
 }
 

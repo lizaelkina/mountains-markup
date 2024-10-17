@@ -1,0 +1,66 @@
+//fonts
+@mixin main-title {
+  font-family: $font-title;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 88px;
+  line-height: 100px;
+  color: $text-main;
+}
+
+@mixin section-title {
+  font-family: $font-title;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 64px;
+  line-height: normal;
+  color: $text-main;
+}
+
+@mixin section-subtitle {
+  font-family: $font-subtitle;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: normal;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  color: $accent-color;
+}
+
+@mixin section-info {
+  font-family: $font-primary;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: normal;
+}
+
+@mixin section-text {
+  font-family: $font-primary;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 32px;
+  color: $text-main;
+  //font-size: 24px; для заголовка в футере
+  //color: $accent-color; для заголовка в футере
+}
+
+@mixin section-number {
+  font-family: $font-primary;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 240px;
+  line-height: 240px;
+  color: $text-main;
+}
+
+@mixin footer-text {
+  font-family: $font-footer;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 32px;
+  color: $text-main;
+}
