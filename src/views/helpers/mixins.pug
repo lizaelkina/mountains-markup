@@ -1,0 +1,19 @@
+mixin img(src, alt)
+  img(src=src alt=alt loading='lazy')&attributes(attributes)
+
+mixin picture(src, alt, ext, noMobile)
+  picture
+    if !noMobile
+      source(srcset=src + '-mobile.webp' type='image/webp' media='(max-width: 480px)')
+    source(srcset=src + '.webp' type='image/webp')
+    img(src=src + ext alt=alt loading='lazy')&attributes(attributes)
+
+mixin picture-jpg(src, alt, noMobile)
+  +picture(src, alt, '.jpg', noMobile)&attributes(attributes)
+
+mixin picture-png(src, alt, noMobile)
+  +picture(src, alt, '.png', noMobile)&attributes(attributes)
+
+mixin svg(name)
+  svg(data-svg=name)&attributes(attributes)
+    use(xlink:href=`./img/sprites/sprite.svg#${name}`)
