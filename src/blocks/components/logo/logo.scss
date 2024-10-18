@@ -1,0 +1,13 @@
+.logo {
+  padding: 2px;
+
+  &:focus {
+    outline: 1px solid $text-main;
+  }
+
+  &__img {
+    width: 108px;
+    height: 24px;
+    background-color: transparent;
+  }
+}

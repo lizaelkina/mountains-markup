@@ -17,3 +17,7 @@ mixin picture-png(src, alt, noMobile)
 mixin svg(name)
   svg(data-svg=name)&attributes(attributes)
     use(xlink:href=`./img/sprites/sprite.svg#${name}`)
+
+mixin logo()
+  a.logo(href='./')&attributes(attributes)
+    +img('./img/logo/logo.svg', 'Логотип').logo__img
