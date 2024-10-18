@@ -21,3 +21,6 @@ mixin svg(name)
 mixin logo()
   a.logo(href='./')&attributes(attributes)
     +img('./img/logo/logo.svg', 'Логотип').logo__img
+
+mixin link(title, href)
+  a.link(href=href)&attributes(attributes)= title

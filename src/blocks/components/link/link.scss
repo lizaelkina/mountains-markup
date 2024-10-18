@@ -1,0 +1,53 @@
+.link {
+  position: relative;
+  padding: 2px;
+  @include section-link;
+  transition: color .5s ease, background-color .5s ease;
+
+  &::after {
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: 0;
+    border: none;
+    width: 0;
+    height: .5px;
+    transition: width .5s ease;
+  }
+
+  &:hover::after {
+    width: 100%;
+  }
+
+  &_primary {
+    color: $text-main;
+
+    &::after {
+      background: $text-main;
+    }
+
+    &:active {
+      color: $accent-color;
+    }
+
+    &:focus {
+      outline: 1px solid $text-main;
+    }
+  }
+
+  &_secondary {
+    color: $accent-color;
+
+    &::after {
+      background: $accent-color;
+    }
+
+    &:active {
+      background-color: $text-main;
+    }
+
+    &:focus {
+      outline: 1px solid $accent-color;
+    }
+  }
+}

@@ -28,23 +28,12 @@
   color: $accent-color;
 }
 
-@mixin section-info {
+@mixin section-link {
   font-family: $font-primary;
   font-style: normal;
   font-weight: 700;
   font-size: 18px;
   line-height: normal;
-}
-
-@mixin section-text {
-  font-family: $font-primary;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 32px;
-  color: $text-main;
-  //font-size: 24px; для заголовка в футере
-  //color: $accent-color; для заголовка в футере
 }
 
 @mixin section-number {
@@ -56,7 +45,25 @@
   color: $text-main;
 }
 
-@mixin footer-text {
+@mixin section-text {
+  font-family: $font-primary;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 32px;
+  color: $text-main;
+}
+
+@mixin footer-title {
+  font-family: $font-primary;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  color: $accent-color;
+}
+
+@mixin footer-link {
   font-family: $font-footer;
   font-style: normal;
   font-weight: 500;
