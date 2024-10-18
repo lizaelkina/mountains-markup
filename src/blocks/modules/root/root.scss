@@ -1,16 +1,24 @@
 .root::-webkit-scrollbar {
-  width: 5px;
+  width: 3px;
+  background: $background;
 }
+
 .root::-webkit-scrollbar-track {
-  background: transparent;
+  background: $background;
 }
+
 .root::-webkit-scrollbar-thumb {
   background: $accent-color;
-  border: 3px solid $accent-color;
-  border-radius: 5px;
 }
 
 .root__popup {
   height: 100vh;
   overflow: hidden;
+}
+
+@supports not selector(::-webkit-scrollbar) {
+  html {
+    scrollbar-color: $accent-color $background;
+    scrollbar-width: thin;
+  }
 }

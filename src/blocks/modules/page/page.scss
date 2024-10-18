@@ -1,0 +1,28 @@
+.page {
+  min-width: 320px;
+  font-family: $font-primary;
+  background-color: $background;
+  color: $text-main;
+  height: 200vh; //удалить после наполнения контентом
+
+  &__header {
+    max-width: 1920px;
+  }
+
+  &__banner {
+    max-width: 1920px;
+  }
+
+  &__container {
+    max-width: 1100px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding-left: 100px;
+    padding-right: 100px;
+
+    &_type_footer {
+      margin-top: 200px;
+    }
+  }
+}
+
