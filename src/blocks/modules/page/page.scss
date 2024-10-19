@@ -3,10 +3,13 @@
   font-family: $font-primary;
   background-color: $background;
   color: $text-main;
-  height: 200vh; //удалить после наполнения контентом
 
   &__header {
-    max-width: 1920px;
+    max-width: 1760px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding-left: 80px;
+    padding-right: 80px;
   }
 
   &__banner {

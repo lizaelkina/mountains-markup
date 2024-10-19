@@ -1,0 +1,16 @@
+header.header
+  nav.header__container.page__header
+    +logo
+
+    div.header__nav
+      ul.header__links
+        li
+          +link('Equipment', '#').link_primary
+        li
+          +link('About us', '#').link_primary
+        li
+          +link('Blog', '#about').link_primary
+
+    a(href='#').link__svg
+      +svg('login').icon
+      span.link.link_span Account
