@@ -2,7 +2,6 @@
   position: relative;
   padding: 2px;
   @include section-link;
-  transition: color .5s ease, background-color .5s ease;
 
   &::after {
     position: absolute;
@@ -15,12 +14,19 @@
     transition: width .5s ease;
   }
 
-  &:hover::after {
-    width: 100%;
+  @media (any-hover: hover) {
+    &:hover::after {
+      width: 100%;
+    }
   }
 
   &_primary {
     color: $text-main;
+    transition: color .5s ease;
+
+    &:focus-visible {
+      outline: 1px solid $text-main;
+    }
 
     &::after {
       background: $text-main;
@@ -29,14 +35,15 @@
     &:active {
       color: $accent-color;
     }
-
-    &:focus {
-      outline: 1px solid $text-main;
-    }
   }
 
   &_secondary {
     color: $accent-color;
+    transition: background-color .5s ease;
+
+    &:focus-visible {
+      outline: 1px solid $accent-color;
+    }
 
     &::after {
       background: $accent-color;
@@ -45,9 +52,38 @@
     &:active {
       background-color: $text-main;
     }
+  }
 
-    &:focus {
-      outline: 1px solid $accent-color;
+  &_span {
+    padding: 0;
+
+    &::after {
+      background: $text-main;
     }
   }
+
+  &__svg {
+    padding: 2px 2px 2px 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: $text-main;
+    transition: color .5s ease;
+
+    &:focus-visible {
+      outline: 1px solid $text-main;
+    }
+
+    &:active .icon {
+      fill: $accent-color;
+    }
+
+    &:active {
+      color: $accent-color;
+    }
+  }
+}
+
+.link:active.link:hover::after {
+  width: 0;
 }

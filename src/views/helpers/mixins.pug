@@ -16,7 +16,7 @@ mixin picture-png(src, alt, noMobile)
 
 mixin svg(name)
   svg(data-svg=name)&attributes(attributes)
-    use(xlink:href=`./img/sprites/sprite.svg#${name}`)
+    use(xlink:href=`./img/sprites/sprite.svg#${name}`).sprite
 
 mixin logo()
   a.logo(href='./')&attributes(attributes)
@@ -24,3 +24,7 @@ mixin logo()
 
 mixin link(title, href)
   a.link(href=href)&attributes(attributes)= title
+
+mixin icon-link(name, href, label)
+  a(href=href aria-label=label).icon-link
+    +svg(name).icon

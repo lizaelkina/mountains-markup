@@ -1,0 +1,28 @@
+.icon {
+  width: 24px;
+  height: 24px;
+  fill: $text-main;
+  transition: fill .5s ease;
+}
+
+.icon-link {
+  display: block;
+  width: 24px;
+  height: 24px;
+  fill: $text-main;
+  transition: background-color .5s ease;
+
+  &:focus-visible .icon {
+    outline: 1px solid $text-main;
+  }
+
+  @media (any-hover: hover) {
+    &:hover .icon {
+      fill: $accent-color;
+    }
+  }
+
+  &:active .icon {
+    background-color: $accent-opacity;
+  }
+}
