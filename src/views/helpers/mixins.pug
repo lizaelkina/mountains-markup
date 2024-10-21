@@ -15,7 +15,7 @@ mixin picture-png(src, alt, noMobile)
   +picture(src, alt, '.png', noMobile)&attributes(attributes)
 
 mixin svg(name)
-  svg(data-svg=name)&attributes(attributes)
+  svg(data-svg=name).icon-link__svg&attributes(attributes)
     use(xlink:href=`./img/sprites/sprite.svg#${name}`).sprite
 
 mixin logo()
@@ -25,6 +25,21 @@ mixin logo()
 mixin link(title, href)
   a.link(href=href)&attributes(attributes)= title
 
-mixin icon-link(name, href, label)
+mixin icon-link(name, label, href)
   a(href=href aria-label=label).icon-link
-    +svg(name).icon
+    +svg(name)&attributes(attributes).icon
+
+mixin nav-link(name, title, href)
+  a(href=href).icon-link.icon-link_caption.icon-link_caption_primary&attributes(attributes)
+    +svg(name).icon-link__svg_primary
+    span.icon-link__text.icon-link__text_primary= title
+
+mixin scroll-down(href)
+  a(href=href).icon-link.icon-link_caption.icon-link_caption_primary
+    span.icon-link__text.icon-link__text_primary Scroll down
+    +svg('arrow_down').icon-link__svg_primary
+
+mixin read-more(href)
+  a(href=href).icon-link.icon-link_caption.icon-link_caption_secondary
+    span.icon-link__text.icon-link__text_secondary Read more
+    +svg('arrow_more').icon-link__svg_secondary

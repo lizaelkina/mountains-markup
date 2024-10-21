@@ -12,11 +12,22 @@
   &__nav {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     gap: 40px;
   }
 
   &__links {
     display: flex;
     gap: 40px;
+  }
+
+  &__link {
+    padding-left: 0;
+    padding-right: 2px;
+    gap: 8px;
+
+    & .icon-link__text {
+      text-transform: none;
+    }
   }
 }

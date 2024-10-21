@@ -1,28 +1,110 @@
-.icon {
-  width: 24px;
-  height: 24px;
-  fill: $text-main;
-  transition: fill .5s ease;
-}
-
 .icon-link {
-  display: block;
-  width: 24px;
-  height: 24px;
-  fill: $text-main;
-  transition: background-color .5s ease;
+  display: flex;
 
-  &:focus-visible .icon {
+  &:focus-visible {
     outline: 1px solid $text-main;
   }
 
-  @media (any-hover: hover) {
-    &:hover .icon {
+  &__svg {
+    width: 24px;
+    height: 24px;
+    transition: fill .5s ease;
+
+    &_primary {
+      fill: $text-main;
+    }
+
+    &_secondary {
       fill: $accent-color;
     }
   }
 
-  &:active .icon {
+  &_caption {
+    padding: 2px;
+    align-items: center;
+    gap: 16px;
+
+    &:active .icon-link__text:hover::after {
+      width: 0;
+    }
+
+    &_primary {
+      padding-right: 0;
+      color: $text-main;
+
+      &:active .icon-link__svg_primary {
+        fill: $accent-color;
+      }
+
+      &:active .icon-link__text_primary {
+        color: $accent-color;
+      }
+    }
+
+    &_secondary {
+      color: $accent-color;
+      transition: background-color .5s ease;
+
+      &:active {
+        background-color: $text-main;
+      }
+    }
+  }
+
+  &__text {
+    position: relative;
+    @include section-link;
+    text-transform: lowercase;
+    transition: color .5s ease;
+
+    &::after {
+      position: absolute;
+      content: '';
+      left: 0;
+      bottom: 0;
+      border: none;
+      width: 0;
+      height: .5px;
+      transition: width .5s ease;
+    }
+
+    @media (any-hover: hover) {
+      &:hover::after {
+        width: 100%;
+      }
+    }
+
+    &_primary {
+      order: 0;
+      color: $text-main;
+
+      &::after {
+        background: $text-main;
+      }
+    }
+
+    &_secondary {
+      color: $accent-color;
+
+      &::after {
+        background: $accent-color;
+      }
+    }
+  }
+}
+
+.icon {
+  transition: fill .5s ease, background-color .5s ease;
+
+  .icon-link &:hover {
+    fill: $accent-color;
+  }
+
+  .icon-link &:active {
     background-color: $accent-opacity;
+  }
+
+  .icon-link &:active.icon:hover {
+    fill: $text-main;
   }
 }
