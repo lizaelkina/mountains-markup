@@ -1,0 +1,16 @@
+.section-subtitle {
+  position: relative;
+  padding-left: 104px;
+  @include section-subtitle;
+
+  &::before {
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
+    width: 72px;
+    height: 2px;
+    background-color: $accent-color;
+  }
+}

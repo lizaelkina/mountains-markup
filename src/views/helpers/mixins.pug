@@ -35,7 +35,7 @@ mixin nav-link(name, title, href)
     span.icon-link__text.icon-link__text_primary= title
 
 mixin scroll-down(href)
-  a(href=href).icon-link.icon-link_caption.icon-link_caption_primary
+  a(href=href).icon-link.icon-link_caption.icon-link_caption_primary&attributes(attributes)
     span.icon-link__text.icon-link__text_primary Scroll down
     +svg('arrow_down').icon-link__svg.icon-link__svg_primary
 
@@ -43,3 +43,6 @@ mixin read-more(href)
   a(href=href).icon-link.icon-link_caption.icon-link_caption_secondary
     span.icon-link__text.icon-link__text_secondary Read more
     +svg('arrow_more').icon-link__svg.icon-link__svg_secondary
+
+mixin section-subtitle(subtitle)
+  h3.section-subtitle= subtitle
