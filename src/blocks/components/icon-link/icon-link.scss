@@ -94,6 +94,9 @@
 }
 
 .icon {
+  width: 24px;
+  height: 24px;
+  fill: $text-main;
   transition: fill .5s ease, background-color .5s ease;
 
   .icon-link &:hover {

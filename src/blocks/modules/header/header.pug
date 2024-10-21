@@ -1,8 +1,8 @@
 header.header
-  nav.header__container.page__header
+  nav.header__nav.page__header
     +logo
 
-    div.header__nav
+    div.header__container
       ul.header__links
         li
           +link('Equipment', '#').link_primary
@@ -11,4 +11,7 @@ header.header
         li
           +link('Blog', '#about').link_primary
 
-    +nav-link('login', 'Account', '#').header__link
+    +nav-link('login', 'Account', '#').header__icon-link
+
+    button.button.button_icon.header__burger(type='button' aria-label='Открыть меню' aria-expanded='false')
+      +svg('menu').button__svg

@@ -1,0 +1,35 @@
+.button {
+  width: 30px;
+  height: 30px;
+  box-sizing: border-box;
+  padding: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  fill: $text-main;
+  background-color: transparent;
+  transition: fill .5s ease, background-color .5s ease;
+  cursor: pointer;
+
+  &:focus-visible {
+    outline: 1px solid $text-main;
+  }
+
+  &:hover {
+    fill: $accent-color;
+  }
+
+  &:active {
+    background-color: $accent-opacity;
+
+    &.button:hover {
+      fill: $text-main;
+    }
+  }
+
+  &__svg {
+    width: 100%;
+    height: 100%;
+  }
+}
