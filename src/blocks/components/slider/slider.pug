@@ -1,0 +1,12 @@
+mixin slider-link(title, href)
+  a.slider__link(href=href)&attributes(attributes)= title
+
+ul.slider.page__slider
+  li.slider__tab.slider__tab_active
+    +slider-link('Start', '#')
+  li.slider__tab
+    +slider-link('01', '#')
+  li.slider__tab
+    +slider-link('02', '#')
+  li.slider__tab
+    +slider-link('03', '#')
