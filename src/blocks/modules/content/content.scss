@@ -2,4 +2,16 @@
   min-height: calc(100vh - 280px);
   display: flex;
   flex-direction: column;
+
+  &__slider {
+    position: fixed;
+    top: 300px;
+    right: auto;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .content__slider {
+    display: none;
+  }
 }
