@@ -6,6 +6,11 @@
   font-size: 88px;
   line-height: 100px;
   color: $text-main;
+
+  @media screen and (max-width: 1024px) {
+    font-size: clamp(40px, 8vw, 88px);
+    line-height: normal;
+  }
 }
 
 @mixin section-title {
