@@ -6,6 +6,7 @@
   font-size: 88px;
   line-height: 100px;
   color: $text-main;
+  text-transform: capitalize;
 
   @media screen and (max-width: 1024px) {
     font-size: clamp(40px, 8vw, 88px);
@@ -47,7 +48,7 @@
   font-weight: 700;
   font-size: 240px;
   line-height: 240px;
-  color: $text-main;
+  color: $number-opacity;
 }
 
 @mixin section-text {
