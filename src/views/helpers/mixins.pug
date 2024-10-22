@@ -1,18 +1,11 @@
 mixin img(src, alt)
   img(src=src alt=alt loading='lazy')&attributes(attributes)
 
-mixin picture(src, alt, ext, noMobile)
-  picture
-    if !noMobile
-      source(srcset=src + '-mobile.webp' type='image/webp' media='(max-width: 480px)')
+mixin picture(src, alt)
+  picture&attributes(attributes)
+    source(srcset=src + '-mobile.webp' type='image/webp' media='(max-width: 480px)')
     source(srcset=src + '.webp' type='image/webp')
-    img(src=src + ext alt=alt loading='lazy')&attributes(attributes)
-
-mixin picture-jpg(src, alt, noMobile)
-  +picture(src, alt, '.jpg', noMobile)&attributes(attributes)
-
-mixin picture-png(src, alt, noMobile)
-  +picture(src, alt, '.png', noMobile)&attributes(attributes)
+    img(src=src + '.jpg' alt=alt loading='lazy').card__image
 
 mixin svg(name)
   svg(data-svg=name)&attributes(attributes)
@@ -30,17 +23,17 @@ mixin icon-link(name, label, href)
     +svg(name).icon
 
 mixin nav-link(name, title, href)
-  a(href=href).icon-link.icon-link_caption.icon-link_caption_primary&attributes(attributes)
+  a(href=href).icon-link.icon-link_caption.icon-link_caption_primary
     +svg(name).icon-link__svg.icon-link__svg_primary
     span.icon-link__text.icon-link__text_primary= title
 
 mixin scroll-down(href)
-  a(href=href).icon-link.icon-link_caption.icon-link_caption_primary&attributes(attributes)
+  a(href=href).icon-link.icon-link_caption.icon-link_caption_primary
     span.icon-link__text.icon-link__text_primary Scroll down
     +svg('arrow_down').icon-link__svg.icon-link__svg_primary
 
 mixin read-more(href)
-  a(href=href).icon-link.icon-link_caption.icon-link_caption_secondary&attributes(attributes)
+  a(href=href).icon-link.icon-link_caption.icon-link_caption_secondary
     span.icon-link__text.icon-link__text_secondary Read more
     +svg('arrow_more').icon-link__svg.icon-link__svg_secondary
 
