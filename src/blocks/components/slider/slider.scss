@@ -4,7 +4,7 @@
   align-items: end;
 
   &__tab {
-    padding: 20px 32px 20px 0;
+    padding: 18px 30px 18px 0;
     border-right-width: 3px;
     border-right-style: solid;
     border-right-color: $text-opacity;
@@ -17,5 +17,10 @@
 
   &__link {
     @include section-text;
+    padding: 2px;
+
+    &:focus-visible {
+      outline: 1px solid $text-main;
+    }
   }
 }
