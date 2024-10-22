@@ -37,17 +37,14 @@
 }
 
 @media screen and (max-width: 1100px) {
-  .page__header {
-    width: 100%;
-  }
-
+  .page__header,
   .page__banner {
     width: 100%;
   }
 
   .page__container {
     width: 100%;
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }

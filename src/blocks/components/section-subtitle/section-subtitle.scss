@@ -14,3 +14,13 @@
     background-color: $accent-color;
   }
 }
+
+@media screen and (max-width: 362px) {
+  .section-subtitle {
+    padding-left: 62px;
+
+    &::before {
+      width: 50px;
+    }
+  }
+}
