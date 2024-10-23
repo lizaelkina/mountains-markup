@@ -1,0 +1,80 @@
+.footer {
+  display: grid;
+  grid-template-areas:
+    'logo . blog mntn'
+    'copyright . blog mntn';
+  justify-content: space-between;
+  row-gap: 122px;
+
+  &__column {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    &_logo {
+      grid-area: logo;
+    }
+
+    &_blog {
+      grid-area: blog;
+    }
+
+    &_mntn {
+      grid-area: mntn;
+    }
+  }
+
+  &__text {
+    max-width: 303px;
+    width: 100%;
+    @include section-text;
+  }
+
+  &__copyright {
+    grid-area: copyright;
+    @include footer-link;
+    color: $text-opacity;
+  }
+
+  &__title {
+    @include footer-title;
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &__link {
+    @include footer-link;
+    text-transform: capitalize;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .footer {
+    grid-template-areas:
+    'logo logo'
+    'blog mntn'
+    'copyright copyright';
+    justify-content: space-around;
+    gap: 50px;
+
+    &__copyright {
+      text-align: center;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .footer {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    'logo'
+    'blog'
+    'mntn'
+    'copyright';
+    justify-content: start;
+  }
+}
