@@ -2,10 +2,10 @@ mixin img(src, alt)
   img(src=src alt=alt loading='lazy')&attributes(attributes)
 
 mixin picture(src, alt)
-  picture&attributes(attributes)
+  picture
     source(srcset=src + '-mobile.webp' type='image/webp' media='(max-width: 480px)')
     source(srcset=src + '.webp' type='image/webp')
-    img(src=src + '.jpg' alt=alt loading='lazy').card__image
+    img(src=src + '.jpg' alt=alt loading='lazy')&attributes(attributes)
 
 mixin svg(name)
   svg(data-svg=name)&attributes(attributes)
@@ -39,3 +39,25 @@ mixin read-more(href)
 
 mixin section-subtitle(subtitle)
   h3.section-subtitle= subtitle
+
+mixin card(number, subtitle, title, text, src)
+  article(id=`blog-${number}`).card
+    div.card__wrap
+      div.card__number= number
+      div.card__container
+        +section-subtitle(subtitle)
+        h2.card__title= title
+        p.card__text= text
+        +read-more
+    +picture(src, subtitle).card__image
+
+mixin card-revert(number, subtitle, title, text, src)
+  article(id=`blog-${number}`).card.card_revert
+    +picture(src, subtitle).card__image
+    div.card__wrap&attributes(attributes)
+      div.card__number= number
+      div.card__container
+        +section-subtitle(subtitle)
+        h2.card__title= title
+        p.card__text= text
+        +read-more

@@ -6,25 +6,21 @@
 
   &__container {
     max-width: 1462px;
-    width: calc(90% - 80px);
+    width: 80%;
     margin: 0 auto;
     box-sizing: border-box;
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
 
     &_type_header {
       max-width: 1920px;
       width: calc(100% - 40px);
       margin-bottom: -156px;
-      padding-left: 20px;
-      padding-right: 20px;
     }
 
     &_type_intro {
       max-width: 1920px;
       width: calc(100% - 40px);
-      padding-left: 20px;
-      padding-right: 20px;
     }
 
     &_type_footer {
@@ -33,11 +29,9 @@
   }
 }
 
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 1160px) {
   .page__container {
     width: 100%;
-    padding-left: 20px;
-    padding-right: 20px;
 
     &_type_header {
       margin-bottom: -88px;
