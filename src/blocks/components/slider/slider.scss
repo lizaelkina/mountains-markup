@@ -4,10 +4,10 @@
   align-items: end;
 
   &__tab {
-    padding: 18px 30px 18px 0;
+    padding: 14px 29px 14px 0;
     border-right-width: 3px;
     border-right-style: solid;
-    border-right-color: $slider-opacity;
+    border-right-color: $text-opacity;
     transition: border-color .5s ease;
 
     &_active {
