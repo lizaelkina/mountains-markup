@@ -48,7 +48,7 @@ mixin card(number, subtitle, title, text, src)
         +section-subtitle(subtitle)
         h2.card__title= title
         p.card__text= text
-        +read-more
+        +read-more('#')
     +picture(src, subtitle).card__image
 
 mixin card-revert(number, subtitle, title, text, src)
@@ -60,4 +60,4 @@ mixin card-revert(number, subtitle, title, text, src)
         +section-subtitle(subtitle)
         h2.card__title= title
         p.card__text= text
-        +read-more
+        +read-more('#')
