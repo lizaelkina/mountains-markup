@@ -16,7 +16,7 @@ mixin logo()
     +img('./img/logo/logo.svg', 'Логотип').logo__img
 
 mixin link(title, href)
-  a.link(href=href)&attributes(attributes)= title
+  a.link.link_primary(href=href)&attributes(attributes)= title
 
 mixin icon-link(name, label, href)
   a(href=href aria-label=label).icon-link
