@@ -13,13 +13,13 @@ mixin svg(name)
 
 mixin logo()
   a.logo(href='./')&attributes(attributes)
-    +img('./img/logo/logo.svg', 'Логотип').logo__img
+    +img('./img/logo/logo.svg', 'Logo').logo__img
 
 mixin link(title, href)
   a.link.link_primary(href=href)&attributes(attributes)= title
 
 mixin icon-link(name, label, href)
-  a(href=href aria-label=label).icon-link
+  a(href=href aria-label=label).icon-link&attributes(attributes)
     +svg(name).icon
 
 mixin nav-link(name, title, href)
