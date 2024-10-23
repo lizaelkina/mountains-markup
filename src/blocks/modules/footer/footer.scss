@@ -1,4 +1,6 @@
 .footer {
+  padding-top: 120px;
+  padding-bottom: 120px;
   display: grid;
   grid-template-areas:
     'logo . blog mntn'
@@ -54,6 +56,7 @@
 
 @media screen and (max-width: 900px) {
   .footer {
+    padding-bottom: 50px;
     grid-template-areas:
     'logo logo'
     'blog mntn'
