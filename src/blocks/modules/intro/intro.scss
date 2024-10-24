@@ -75,3 +75,14 @@
     writing-mode: revert;
   }
 }
+
+@media screen and (max-width: 640px) {
+  .intro__container {
+    grid-template-areas: none;
+    row-gap: 0;
+  }
+
+  .intro__social {
+    display: none;
+  }
+}
