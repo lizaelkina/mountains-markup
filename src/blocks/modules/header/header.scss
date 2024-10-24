@@ -22,16 +22,6 @@
     gap: 40px;
   }
 
-  &__icon-link {
-    padding-left: 0;
-    padding-right: 2px;
-    gap: 8px;
-
-    & .icon-link__text {
-      text-transform: none;
-    }
-  }
-
   &__burger {
     display: none;
   }
