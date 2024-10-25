@@ -11,7 +11,7 @@
     border: none;
     width: 0;
     height: .5px;
-    transition: width .5s ease;
+    transition: width .5s ease-in-out;
   }
 
   &:focus-visible {
@@ -30,7 +30,7 @@
 
   &_primary {
     color: $text-main;
-    transition: color .5s ease;
+    transition: color .5s ease-in-out;
 
     &::after {
       background: $text-main;
@@ -43,7 +43,7 @@
 
   &_secondary {
     color: $accent-color;
-    transition: background-color .5s ease;
+    transition: background-color .5s ease-in-out;
 
     &::after {
       background: $accent-color;

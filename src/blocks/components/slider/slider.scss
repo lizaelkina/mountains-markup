@@ -8,7 +8,7 @@
     border-right-width: 3px;
     border-right-style: solid;
     border-right-color: $text-opacity;
-    transition: border-color .5s ease;
+    transition: border-color .5s ease-in-out;
 
     &_active {
       border-right-color: $text-main;

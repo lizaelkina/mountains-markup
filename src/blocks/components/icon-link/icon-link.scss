@@ -9,7 +9,7 @@
   &__svg {
     width: 24px;
     height: 24px;
-    transition: fill .5s ease;
+    transition: fill .5s ease-in-out;
 
     &_primary {
       fill: $text-main;
@@ -44,7 +44,7 @@
 
     &_secondary {
       color: $accent-color;
-      transition: background-color .5s ease;
+      transition: background-color .5s ease-in-out;
 
       &:active {
         background-color: $text-main;
@@ -62,7 +62,7 @@
     position: relative;
     @include section-link;
     text-transform: lowercase;
-    transition: color .5s ease;
+    transition: color .5s ease-in-out;
 
       &_nav {
         text-transform: none;
@@ -76,7 +76,7 @@
       border: none;
       width: 0;
       height: .5px;
-      transition: width .5s ease;
+      transition: width .5s ease-in-out;
     }
 
     @media (any-hover: hover) {
@@ -108,7 +108,7 @@
   width: 24px;
   height: 24px;
   fill: $text-main;
-  transition: fill .5s ease, background-color .5s ease;
+  transition: fill .5s ease, background-color .5s ease-in-out;
 
   .icon-link &:hover {
     fill: $accent-color;

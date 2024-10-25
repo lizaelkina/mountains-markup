@@ -9,7 +9,7 @@
   border: none;
   fill: $text-main;
   background-color: transparent;
-  transition: fill .5s ease, background-color .5s ease;
+  transition: fill .5s ease-in-out, background-color .5s ease-in-out;
   cursor: pointer;
 
   &:focus-visible {
