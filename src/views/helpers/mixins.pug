@@ -41,8 +41,8 @@ mixin section-subtitle(subtitle)
   h3.section-subtitle= subtitle
 
 mixin card(number, subtitle, title, text, src)
-  article(id=`blog-${number}`).card
-    div(data-aos='fade-right').card__wrap
+  article(id=`blog-${number}`).card.js-tab-content
+    div(data-aos='fade-down').card__wrap
       div.card__number= number
       div.card__container
         +section-subtitle(subtitle)
@@ -52,9 +52,9 @@ mixin card(number, subtitle, title, text, src)
     +picture(src, subtitle)(data-aos='zoom-in').card__image
 
 mixin card-revert(number, subtitle, title, text, src)
-  article(id=`blog-${number}`).card.card_revert
+  article(id=`blog-${number}`).card.card_revert.js-tab-content
     +picture(src, subtitle)(data-aos='zoom-in').card__image
-    div(data-aos='fade-left').card__wrap&attributes(attributes)
+    div(data-aos='fade-down').card__wrap&attributes(attributes)
       div.card__number= number
       div.card__container
         +section-subtitle(subtitle)

@@ -1,12 +1,12 @@
 mixin slider-link(title, href)
-  a.slider__link(href=href)&attributes(attributes)= title
+  a.slider__link(href=href)= title
 
 ul.slider.content__slider
-  li.slider__tab.slider__tab_active
+  li.slider__tab.slider__tab_active.js-tab
     +slider-link('Start', '#intro')
-  li.slider__tab
+  li.slider__tab.js-tab
     +slider-link('01', '#blog-01')
-  li.slider__tab
+  li.slider__tab.js-tab
     +slider-link('02', '#blog-02')
-  li.slider__tab
+  li.slider__tab.js-tab
     +slider-link('03', '#blog-03')
