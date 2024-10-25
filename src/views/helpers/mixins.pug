@@ -23,9 +23,9 @@ mixin icon-link(name, label, href)
     +svg(name).icon
 
 mixin nav-link(name, title, href)
-  a(href=href).icon-link.icon-link_caption.icon-link_caption_primary.icon-link_caption_nav&attributes(attributes)
+  a(href=href).icon-link.icon-link_caption.icon-link_caption_primary&attributes(attributes)
     +svg(name).icon-link__svg.icon-link__svg_primary
-    span.icon-link__text.icon-link__text_primary.icon-link__text_nav= title
+    span.icon-link__text.icon-link__text_primary= title
 
 mixin scroll-down(href)
   a(href=href).icon-link.icon-link_caption.icon-link_caption_primary&attributes(attributes)

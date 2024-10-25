@@ -25,6 +25,12 @@
     align-items: center;
     gap: 16px;
 
+    :is(.header, .menu) :is(&) {
+      padding-left: 0;
+      padding-right: 2px;
+      gap: 8px;
+    }
+
     &:active .icon-link__text:hover::after {
       width: 0;
     }
@@ -50,12 +56,6 @@
         background-color: $text-main;
       }
     }
-
-    &_nav {
-      padding-left: 0;
-      padding-right: 2px;
-      gap: 8px;
-    }
   }
 
   &__text {
@@ -64,9 +64,9 @@
     text-transform: lowercase;
     transition: color .5s ease-in-out;
 
-      &_nav {
-        text-transform: none;
-      }
+    :is(.header, .menu) :is(&) {
+      text-transform: none;
+    }
 
     &::after {
       position: absolute;
