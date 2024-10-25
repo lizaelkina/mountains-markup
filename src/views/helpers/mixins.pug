@@ -42,19 +42,19 @@ mixin section-subtitle(subtitle)
 
 mixin card(number, subtitle, title, text, src)
   article(id=`blog-${number}`).card
-    div.card__wrap
+    div(data-aos='fade-right').card__wrap
       div.card__number= number
       div.card__container
         +section-subtitle(subtitle)
         h2.card__title= title
         p.card__text= text
         +read-more('#')
-    +picture(src, subtitle).card__image
+    +picture(src, subtitle)(data-aos='zoom-in').card__image
 
 mixin card-revert(number, subtitle, title, text, src)
   article(id=`blog-${number}`).card.card_revert
-    +picture(src, subtitle).card__image
-    div.card__wrap&attributes(attributes)
+    +picture(src, subtitle)(data-aos='zoom-in').card__image
+    div(data-aos='fade-left').card__wrap&attributes(attributes)
       div.card__number= number
       div.card__container
         +section-subtitle(subtitle)
