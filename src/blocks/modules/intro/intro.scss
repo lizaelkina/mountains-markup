@@ -1,5 +1,4 @@
 .intro {
-  position: relative;
   width: 100%;
   aspect-ratio: 3840 / 3384;
   background-image: linear-gradient(to bottom, transparent 72%, $background),
@@ -10,7 +9,6 @@
   background-repeat: no-repeat;
 
   &__container {
-    position: relative;
     padding-top: 287px;
     padding-bottom: 1000px;
     display: grid;
