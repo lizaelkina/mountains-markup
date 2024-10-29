@@ -1,9 +1,28 @@
 .intro {
+  position: relative;
   width: 100%;
+  aspect-ratio: 3840 / 3384;
+  background-image: linear-gradient(to bottom, transparent 72%, $background),
+                    image-set(url('../img/intro/banner' + '.webp') type('image/webp'));
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: $background;
+    opacity: .3;
+  }
 
   &__container {
-    padding-top: 280px;
-    padding-bottom: 280px;
+    position: relative;
+    padding-top: 287px;
+    padding-bottom: 1000px;
     display: grid;
     grid-template-areas:
     'social main slider'
