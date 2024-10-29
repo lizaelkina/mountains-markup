@@ -3,21 +3,11 @@
   width: 100%;
   aspect-ratio: 3840 / 3384;
   background-image: linear-gradient(to bottom, transparent 72%, $background),
+                    linear-gradient(-30deg, transparent 40%, $background),
                     image-set(url('../img/intro/banner' + '.webp') type('image/webp'));
   background-position: top;
   background-size: cover;
   background-repeat: no-repeat;
-
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background-color: $background;
-    opacity: .3;
-  }
 
   &__container {
     position: relative;
