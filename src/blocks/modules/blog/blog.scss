@@ -1,12 +1,22 @@
 .blog {
-  margin-top: -150px;
-  display: flex;
-  flex-direction: column;
-  gap: 200px;
+  z-index: 1;
+  background:  linear-gradient(to top, $background 95%, transparent);
+  margin-top: -80px;
+  padding-bottom: 80px;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 200px;
+  }
 }
 
 @media screen and (max-width: 1024px) {
   .blog {
+    padding-bottom: 0;
+  }
+
+  .blog__container {
     gap: 100px;
   }
 }

@@ -1,12 +1,18 @@
 .footer {
-  padding-top: 120px;
-  padding-bottom: 120px;
-  display: grid;
-  grid-template-areas:
+  position: relative;
+  z-index: 1;
+  background-color: $background;
+
+  &__container {
+    padding-top: 120px;
+    padding-bottom: 120px;
+    display: grid;
+    grid-template-areas:
     'logo . blog mntn'
     'copyright . blog mntn';
-  justify-content: space-between;
-  row-gap: 122px;
+    justify-content: space-between;
+    row-gap: 122px;
+  }
 
   &__column {
     display: flex;
@@ -55,7 +61,7 @@
 }
 
 @media screen and (max-width: 900px) {
-  .footer {
+  .footer__container {
     padding-bottom: 50px;
     grid-template-areas:
     'logo logo'
@@ -71,7 +77,7 @@
 }
 
 @media screen and (max-width: 480px) {
-  .footer {
+  .footer__container {
     grid-template-columns: 1fr;
     grid-template-areas:
     'logo'
