@@ -1,7 +1,10 @@
 const page = document.querySelector('.page');
 const layers = page.querySelectorAll('.intro__layer');
 
+const SWITCH_OFF_BREAKPOINT= 820;
+
 let isScrollListenerAdded = false;
+
 const onScrollListener = function () {
   const scrollPosition = window.scrollY;
   layers.forEach((layer) => {
@@ -24,14 +27,14 @@ function removeScrollListener() {
   isScrollListenerAdded = false;
 }
 
-if (document.documentElement.clientWidth > 820) {
+if (document.documentElement.clientWidth > SWITCH_OFF_BREAKPOINT) {
   addScrollListener();
 }
 
 window.addEventListener('resize', function () {
-  if (document.documentElement.clientWidth > 820 && !isScrollListenerAdded) {
+  if (document.documentElement.clientWidth > SWITCH_OFF_BREAKPOINT && !isScrollListenerAdded) {
     addScrollListener();
-  } else if (document.documentElement.clientWidth <= 820 && isScrollListenerAdded) {
+  } else if (document.documentElement.clientWidth <= SWITCH_OFF_BREAKPOINT && isScrollListenerAdded) {
     removeScrollListener();
   }
 });
