@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>MNTN</title>
+    <meta name="theme-color" content="#fff">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon">
+    <link rel="icon" sizes="16x16" href="img/favicons/favicon-16x16.png" type="image/png">
+    <link rel="icon" sizes="32x32" href="img/favicons/favicon-32x32.png" type="image/png">
+    <link rel="apple-touch-icon-precomposed" href="img/favicons/apple-touch-icon-precomposed.png">
+    <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
+    <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.min.css">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  </head>
+  <body class="root">
+    <div class="page">
+      <header class="header">
+        <nav class="header__nav page__container page__container_type_header"><a class="logo" href="./"><img class="logo__img" src="./img/logo/logo.svg" alt="Logo" loading="lazy"/></a>
+          <div class="header__container">
+            <ul class="header__links">
+              <li><a class="link link_primary" href="#">Equipment</a>
+              </li>
+              <li><a class="link link_primary" href="#">About us</a>
+              </li>
+              <li><a class="link link_primary" href="#blog">Blog</a>
+              </li>
+            </ul>
+          </div><a class="icon-link icon-link_caption icon-link_caption_primary header__icon-link" href="#">
+            <svg class="icon-link__svg icon-link__svg_primary" data-svg="login">
+              <use xlink:href="./img/sprites/sprite.svg#login"></use>
+            </svg><span class="icon-link__text icon-link__text_primary">Account</span></a>
+          <button class="button button_icon header__burger" type="button" aria-label="Open menu" aria-expanded="false">
+            <svg class="button__svg" data-svg="menu">
+              <use xlink:href="./img/sprites/sprite.svg#menu"></use>
+            </svg>
+          </button>
+        </nav>
+      </header>
+      <main class="content">
+        <section class="intro" id="intro">
+          <div class="intro__layer intro__layer_sky" data-speed="20"></div>
+          <div class="intro__layer intro__layer_mountains" data-speed="50"></div>
+          <div class="intro__layer intro__layer_ground" data-speed="80"></div>
+          <div class="intro__container page__container page__container_type_intro js-tab-content">
+            <div class="intro__social">
+              <p class="intro__text">Follow us</p><a class="icon-link" href="#" aria-label="Instagram">
+                <svg class="icon" data-svg="instagram">
+                  <use xlink:href="./img/sprites/sprite.svg#instagram"></use>
+                </svg></a><a class="icon-link" href="#" aria-label="Twitter">
+                <svg class="icon" data-svg="twitter">
+                  <use xlink:href="./img/sprites/sprite.svg#twitter"></use>
+                </svg></a>
+            </div>
+            <div class="intro__main">
+              <h3 class="section-subtitle">A Hiking guide</h3>
+              <h1 class="intro__title">Be&nbsp;prepared for the Mountains and beyond!</h1><a class="icon-link icon-link_caption icon-link_caption_primary" href="#blog"><span class="icon-link__text icon-link__text_primary">Scroll down</span>
+                <svg class="icon-link__svg icon-link__svg_primary" data-svg="arrow_down">
+                  <use xlink:href="./img/sprites/sprite.svg#arrow_down"></use>
+                </svg></a>
+            </div>
+            <aside class="intro__slider">
+              <ul class="slider content__slider">
+                <li class="slider__tab slider__tab_active js-tab"><a class="slider__link" href="#intro">Start</a>
+                </li>
+                <li class="slider__tab js-tab"><a class="slider__link" href="#blog-01">01</a>
+                </li>
+                <li class="slider__tab js-tab"><a class="slider__link" href="#blog-02">02</a>
+                </li>
+                <li class="slider__tab js-tab"><a class="slider__link" href="#blog-03">03</a>
+                </li>
+              </ul>
+            </aside>
+          </div>
+        </section>
+        <section class="blog" id="blog">
+          <div class="blog__container page__container">
+            <article class="card js-tab-content" id="blog-01">
+              <div class="card__wrap" data-aos="fade-down">
+                <div class="card__number">01</div>
+                <div class="card__container">
+                  <h3 class="section-subtitle">Get started</h3>
+                  <h2 class="card__title">What level of hiker are you?</h2>
+                  <p class="card__text">Determining what level of hiker you are can be an important tool when planning future hikes. This hiking level guide will help you plan hikes according to different hike ratings set by various websites like All Trails and Modern Hiker. What type of hiker are you – novice, moderate, advanced moderate, expert, or expert backpacker?</p><a class="icon-link icon-link_caption icon-link_caption_secondary" href="#"><span class="icon-link__text icon-link__text_secondary">Read more</span>
+                    <svg class="icon-link__svg icon-link__svg_secondary" data-svg="arrow_more">
+                      <use xlink:href="./img/sprites/sprite.svg#arrow_more"></use>
+                    </svg></a>
+                </div>
+              </div>
+              <picture>
+                <source srcset="./img/blog/blog-1-mobile.webp" type="image/webp" media="(max-width: 480px)"/>
+                <source srcset="./img/blog/blog-1.webp" type="image/webp"/><img class="card__image" src="./img/blog/blog-1.jpg" alt="Get started" loading="lazy" data-aos="zoom-in"/>
+              </picture>
+            </article>
+            <article class="card card_revert js-tab-content" id="blog-02">
+              <picture>
+                <source srcset="./img/blog/blog-2-mobile.webp" type="image/webp" media="(max-width: 480px)"/>
+                <source srcset="./img/blog/blog-2.webp" type="image/webp"/><img class="card__image" src="./img/blog/blog-2.jpg" alt="Hiking essentials" loading="lazy" data-aos="zoom-in"/>
+              </picture>
+              <div class="card__wrap card__wrap_revert" data-aos="fade-down">
+                <div class="card__number">02</div>
+                <div class="card__container">
+                  <h3 class="section-subtitle">Hiking essentials</h3>
+                  <h2 class="card__title">Picking the right Hiking Gear!</h2>
+                  <p class="card__text">The nice thing about beginning hiking is that you don’t really need any special gear, you can probably get away with things you already have. Let’s start with clothing. A typical mistake hiking beginners make is wearing jeans and regular clothes, which will get heavy and chafe wif they get sweaty or wet.</p><a class="icon-link icon-link_caption icon-link_caption_secondary" href="#"><span class="icon-link__text icon-link__text_secondary">Read more</span>
+                    <svg class="icon-link__svg icon-link__svg_secondary" data-svg="arrow_more">
+                      <use xlink:href="./img/sprites/sprite.svg#arrow_more"></use>
+                    </svg></a>
+                </div>
+              </div>
+            </article>
+            <article class="card js-tab-content" id="blog-03">
+              <div class="card__wrap" data-aos="fade-down">
+                <div class="card__number">03</div>
+                <div class="card__container">
+                  <h3 class="section-subtitle">Where you go is the key</h3>
+                  <h2 class="card__title">Understand Your Map &amp; Timing</h2>
+                  <p class="card__text">To start, print out the hiking guide and map. If it’s raining, throw them in a Zip-Lock bag. Read over the guide, study the map, and have a good idea of what to expect. I like to know what my next landmark is as I hike. For example, I’ll read the guide and know that say, in a mile, I make a right turn at the junction.</p><a class="icon-link icon-link_caption icon-link_caption_secondary" href="#"><span class="icon-link__text icon-link__text_secondary">Read more</span>
+                    <svg class="icon-link__svg icon-link__svg_secondary" data-svg="arrow_more">
+                      <use xlink:href="./img/sprites/sprite.svg#arrow_more"></use>
+                    </svg></a>
+                </div>
+              </div>
+              <picture>
+                <source srcset="./img/blog/blog-3-mobile.webp" type="image/webp" media="(max-width: 480px)"/>
+                <source srcset="./img/blog/blog-3.webp" type="image/webp"/><img class="card__image" src="./img/blog/blog-3.jpg" alt="Where you go is the key" loading="lazy" data-aos="zoom-in"/>
+              </picture>
+            </article>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <div class="footer__container page__container">
+          <div class="footer__column footer__column_logo"><a class="logo" href="./"><img class="logo__img" src="./img/logo/logo.svg" alt="Logo" loading="lazy"/></a>
+            <p class="footer__text">Get out there &amp;&nbsp;discover your next slope, mountain &amp;&nbsp;destination!</p>
+          </div>
+          <p class="footer__copyright">Copyright 2024&nbsp;MNTN, Inc. Terms &amp;&nbsp;Privacy</p>
+          <nav class="footer__column footer__column_blog">
+            <h3 class="footer__title">More on The Blog</h3>
+            <ul class="footer__links">
+              <li><a class="link link_primary footer__link" href="#">About MNTN</a>
+              </li>
+              <li><a class="link link_primary footer__link" href="#">Contributors &amp; writers</a>
+              </li>
+              <li><a class="link link_primary footer__link" href="#">Write for us</a>
+              </li>
+              <li><a class="link link_primary footer__link" href="#">Contact us</a>
+              </li>
+              <li><a class="link link_primary footer__link" href="#">Privacy policy</a>
+              </li>
+            </ul>
+          </nav>
+          <nav class="footer__column footer__column_mntn">
+            <h3 class="footer__title">More on MNTN</h3>
+            <ul class="footer__links">
+              <li><a class="link link_primary footer__link" href="#">The team</a>
+              </li>
+              <li><a class="link link_primary footer__link" href="#">Jobs</a>
+              </li>
+              <li><a class="link link_primary footer__link" href="#">Press</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </footer>
+      <div class="menu">
+        <div class="menu__container">
+          <button class="button button_icon menu__close" type="button" aria-label="Close menu" aria-expanded="false">
+            <svg class="button__svg" data-svg="close">
+              <use xlink:href="./img/sprites/sprite.svg#close"></use>
+            </svg>
+          </button>
+          <nav class="menu__nav">
+            <ul class="menu__list">
+              <li class="menu__link"><a class="link link_primary" href="#">Equipment</a>
+              </li>
+              <li class="menu__link"><a class="link link_primary" href="#">About us</a>
+              </li>
+              <li class="menu__link"><a class="link link_primary" href="#blog">Blog</a>
+              </li>
+            </ul><a class="icon-link icon-link_caption icon-link_caption_primary menu__link" href="#">
+              <svg class="icon-link__svg icon-link__svg_primary" data-svg="login">
+                <use xlink:href="./img/sprites/sprite.svg#login"></use>
+              </svg><span class="icon-link__text icon-link__text_primary">Account</span></a>
+            <div class="menu__social">
+              <p class="menu__text">Follow us</p><a class="icon-link" href="#" aria-label="Instagram">
+                <svg class="icon" data-svg="instagram">
+                  <use xlink:href="./img/sprites/sprite.svg#instagram"></use>
+                </svg></a><a class="icon-link" href="#" aria-label="Twitter">
+                <svg class="icon" data-svg="twitter">
+                  <use xlink:href="./img/sprites/sprite.svg#twitter"></use>
+                </svg></a>
+            </div>
+          </nav>
+        </div>
+      </div>
+      <div class="overlay"></div>
+    </div>
+  </body>
+  <script src="js/main.min.js"></script>
+</html>
