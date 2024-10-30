@@ -1,16 +1,44 @@
 .intro {
   width: 100%;
-  aspect-ratio: 3840 / 3384;
-  background-image: linear-gradient(to bottom, transparent 72%, $background),
-                    linear-gradient(-30deg, transparent 40%, $background),
-                    image-set(url('../img/intro/banner' + '.webp') type('image/webp'));
-  background-position: top;
-  background-size: cover;
-  background-repeat: no-repeat;
+  aspect-ratio: 2880 / 2000;
+  background:  linear-gradient(to bottom, transparent 72%, $background);
+
+  &__layer {
+    width: 100%;
+    aspect-ratio: 2880 / 2000;
+    position: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+
+    &_sky {
+      background-image: url('../img/intro/sky.webp');
+    }
+
+    &_mountains {
+      background-image: url('../img/intro/mountains.webp');
+    }
+
+    &_ground {
+      background-image: linear-gradient(to bottom, transparent 72%, $background),
+                        url('../img/intro/ground.webp');
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: $background;
+        opacity: .3;
+      }
+    }
+  }
 
   &__container {
-    padding-top: 287px;
-    padding-bottom: 1000px;
+    position: relative;
+    padding-top: 190px;
     display: grid;
     grid-template-areas:
     'social main slider'
@@ -67,19 +95,45 @@
 }
 
 @media screen and (max-width: 820px) {
-  .intro__container {
-    grid-template-areas:
+  .intro {
+    position: relative;
+    aspect-ratio: 960 / 845;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-image: linear-gradient(to bottom, transparent 72%, $background),
+                      url('../img/intro/banner-mobile.webp');
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: $background;
+      opacity: .3;
+    }
+
+    &__layer {
+      display: none;
+    }
+
+    &__container {
+      padding-bottom: 250px;
+      grid-template-areas:
     'main main'
     '. social';
-    row-gap: 100px;
-  }
+      row-gap: 100px;
+    }
 
-  .intro__social {
-    flex-direction: row;
-  }
+    &__social {
+      flex-direction: row;
+    }
 
-  .intro__text {
-    writing-mode: revert;
+    &__text {
+      writing-mode: revert;
+    }
   }
 }
 
