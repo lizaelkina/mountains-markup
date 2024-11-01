@@ -4,11 +4,12 @@ doctype html
 html(lang="ru")
   head
     meta(charset="utf-8")
-    meta(http-equiv="X-UA-Compatible" content="IE=edge")
-    title #{title}
-    meta(name="theme-color" content="#fff")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
     meta(name="apple-mobile-web-app-status-bar-style" content="black-translucent")
-    meta(name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0")
+    meta(name="description" content=title)
+    meta(name="keywords" content=title)
+    meta(name="author" content="Liza Elkina")
+    title #{title}
     link(rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon")
     link(rel="icon" sizes="16x16" href="img/favicons/favicon-16x16.png" type="image/png")
     link(rel="icon" sizes="32x32" href="img/favicons/favicon-32x32.png" type="image/png")
@@ -35,5 +36,5 @@ html(lang="ru")
         block content
       include ../../blocks/modules/footer/footer
       include ../../blocks/modules/menu/menu
-  script(src="js/main.js")
-  block scripts
+    script(src="js/main.js")
+    block scripts
